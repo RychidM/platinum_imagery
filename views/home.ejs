@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="shortcut icon" type="image/png" href="images/favicon/plat_favicon.png">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/helpers.css">
+    <!-- <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/brands.min.js"> -->
+    <link href='https://fonts.googleapis.com/css?family=Cabin' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Righteous' rel='stylesheet'>
+</head>
+<body>
+    <header>
+        <div class="hamburger">
+           <div class="open"><p>MENU</p> </div>
+           <div class="close"> <i class="fas fa-times"></i></div>
+        </div>
+        <nav class="sidebar">
+            <ul class="nav-list">
+            <div class="nav-brand">
+                <img src="/images/platinumlogowhite.png" alt="logo image">
+            </div>
+                <li class="nav-item">
+                    <a href="/" class="nav-link current">
+                      <i class="fas fa-home"></i>Home
+                    </a>
+                </li>
+                    <li class="nav-item">
+                        <a href="/portfolio" class="nav-link">
+                      <i class="fas fa-briefcase"></i>Portfolio
+                    </a>
+                    <ul class="dropdown">
+                        <li class="dropdown-item">
+                            <a href="#" class="drop-link">Fashion</a>
+                        </li>
+                        <li class="dropdown-item">
+                            <a href="#" class="drop-link">Portriat</a>
+                        </li>
+                        <li class="dropdown-item">
+                            <a href="#" class="drop-link">Swim Wear</a>
+                        </li>
+                        <li class="dropdown-item">
+                            <a href="#" class="drop-link">Beauty Editorial</a>
+                        </li>
+                        <li class="dropdown-item">
+                            <a href="#" class="drop-link">Boudior</a>
+                        </li>
+                    </ul>
+                </li>
+                  <li class="nav-item">
+                       <a href="#" class="nav-link">
+                      <i class="fas fa-print"></i>Order Prints
+                    </a>
+                </li>
+                  <li class="nav-item">
+                       <a href="/about" class="nav-link">
+                      <i class="fas fa-address-card"></i>About
+                    </a>
+                </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                      <i class="fas fa-envelope"></i>Contact
+                    </a>
+                </li>
+            </ul>
+            <div class="social">
+                <a href="https://www.instagram.com/platinum.imagery/" class="icon-link" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://web.facebook.com/platinum.imagery01/" class="icon-link" target="_blank">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="https://www.behance.net/platinumimagery" class="icon-link" target="_blank">
+                    <i class="fab fa-behance"></i>
+                </a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="zoom-content">
+            <section>
+                <div id="slider">
+                    <figure class="desktop">
+                     </figure>
+                     <div class="mobile">
+
+                    </div>
+                    </div>
+                <div>
+                   <h1 class="title">PLATINUM.IMAGERY</h1>
+               </div>
+            </section>
+        </div>
+    </main>
+    
+    <script>
+
+        const selectElements = (element) => document.querySelector(element);
+        
+        const header = selectElements('header');
+        const mainContent =selectElements('main');
+
+        selectElements('.hamburger').addEventListener('click', ()=>{
+        header.classList.toggle('active');
+        mainContent.classList.toggle('active');
+ });
+
+       window.onclick = (event) =>{
+         if(event.target.matches('.active')){
+             if(header.classList.contains('active')){
+                 header.classList.remove('active');
+                 mainContent.classList.remove('active');
+             }
+         }
+       };
+
+       let btn1 = document.querySelector('#btn-1');
+       let btn2 = document.querySelector('#btn-2');
+       let btn3 = document.querySelector('#btn-3');
+       let btn4 = document.querySelector('#btn-4');
+       let btn5 = document.querySelector('#btn-5');
+
+       btn1.addEventListener('click', ()=>{
+           document.body.style.backgroundImage = "url('/images/GinkellBoudior-85.jpg')"
+       });
+       btn1.addEventListener('click', ()=>{
+           document.body.style.backgroundImage = "url('/images/hooha_swim_export-5.jpg')";
+       });
+       btn1.addEventListener('click', ()=>{
+           document.body.style.backgroundImage = "url('/images/GinkellBoudior-129.jpg')";
+       });
+       btn1.addEventListener('click', ()=>{
+           document.body.style.backgroundImage = "url('/images/GinkellBoudior-121.jpg')";
+       });
+       btn1.addEventListener('click', ()=>{
+           document.body.style.backgroundImage = "url('/images/leah.jpg')";
+       });
+
+     </script>
+
+</body>
+
+</html>

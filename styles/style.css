@@ -1,0 +1,429 @@
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: 'Nunito', sans-serif;
+    font-size: 10px;
+    background-color:#000;
+}
+
+a{
+    text-decoration: none;
+}
+/* #slider{
+    overflow: hidden;
+}
+
+#slider figure{
+    position: relative;
+    width: 500%;
+    margin: 0;
+    left: 0;
+    animation: 20s slider infinite;
+}
+
+#slider figure img{
+    width: 20%;
+    height: 100vh;
+    float: left;
+    background-size: cover;
+} */
+
+/* @keyframes slider {
+    0%{
+        left: 0;
+    }
+    20%{
+        left: 0;
+    }
+    25%{
+        left: -100%;
+    }
+    45%{
+        left: -100%;
+    }
+    50%{
+        left: -200%;
+    }
+    70%{
+        left: -200%;
+    }
+    75%{
+        left: -300%;
+    }
+    95%{
+        left: -300%;
+    }
+    100%{
+        left: -400%;
+    }
+} */
+
+section{
+    width: 100%;
+    height: 100vh;
+    /* background-color: rgb(0, 0, 24); */
+    background-color: black
+}
+
+section figure{
+    height: 100vh;
+    width: 100%;
+    background-image: url(/images/GinkellBoudior-121.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: .6s;
+
+    animation-name: animate;
+    animation-direction: normal;
+    animation-duration: 30s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+    animation-timing-function: step-start;
+}
+
+section .btn {
+    color: #fff;
+    letter-spacing: .3rem;
+    position: absolute;
+    bottom: 2rem;
+    left: 45%;
+    opacity: 80%;
+    cursor: pointer;
+}
+
+.mobile{
+    height: 100vh;
+    width: 100%;
+    background-image: url(/images/Nkati3.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: .6s;
+
+    animation-name: animation;
+    animation-direction: normal;
+    animation-duration: 30s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+    animation-timing-function: step-start;
+}
+
+section h1{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 4.5rem;
+    color: #fff;
+    text-decoration: uppercase;
+    letter-spacing: 3px;
+    opacity: 70%;
+    position: absolute;
+    top: 27rem;
+    left: 30%;
+    /* text-align: center; */
+}
+
+@keyframes animate{
+    0%{
+        background-image: url(/images/hooha_swim_export-5.jpg);
+        background-position: center;
+        background-size: cover;
+    }
+    20%{
+        background-image: url(/images/GinkellBoudior-85.jpg);
+        background-position: center;
+        background-size: cover;
+    }
+    40%{
+        background-image: url(/images/hooha_swim_export-5.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+    60%{
+        background-image: url(/images/GinkellBoudior-129.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+    80%{
+        background-image: url(/images/GinkellBoudior-121.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+    100%{
+        background-image: url(/images/Leah.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+}
+
+@keyframes animation{
+    0%{
+        background-image: url(/images/Kency2020_wed_3.jpg);
+        background-position: center;
+        background-size: cover;
+    }
+    20%{
+        background-image: url(/images/Nkati3.jpg);
+        background-position: center;
+        background-size: cover;
+    }
+    40%{
+        background-image: url(/images/AmazingLucy-look2-4.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+    60%{
+        background-image: url(/images/newtry.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+    80%{
+        background-image: url(/images/LeanaGel.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+    100%{
+        background-image: url(/images/Kency2020_wed_3.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+}
+
+.hamburger{
+    position: fixed;
+    top: 2rem;
+    right: 3rem;
+    padding: .5rem;
+    cursor: pointer;
+    z-index: 2000;
+}
+
+.hamburger i{
+    font-size: 2rem;
+    background: linear-gradient(to bottom, #fff 0%, #000 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hamburger:hover{
+    transform: translate(0,0);
+    opacity: 78%;
+    transition: opacity .6s;
+}
+
+.close{
+    display: none;
+}
+
+.open p{
+    font-family: 'Righteous';
+    font-size: 1.5rem;
+    color: #fff;
+    letter-spacing: 3px; 
+    background: linear-gradient(to bottom, #fff 0%, #000 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+header::before{
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .9);
+    transition: translate(-100%, -100%);
+    opacity: 0;
+    z-index: 999;
+    transition: opacity .6s, transform .2s .6s; 
+}
+
+.sidebar{
+    background-color: #000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 28rem;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2rem;
+    z-index: 1000;
+    opacity: 90%;
+    transform: translateX(-100%);
+    transition: transform .6s cubic-bezier(0.95, 0.05, 0.795,0.035);
+}
+
+.dropdown-item{
+    position: relative;
+}
+
+.nav-brand{
+    margin-bottom: 3rem;
+}
+
+.nav-list{
+    list-style: none;
+}
+
+.nav-item{
+    position: relative;
+}
+
+.nav-item::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    left: 0;
+    bottom: 0;
+}
+.dropdown-item::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    left: 5px;
+    bottom: 0;
+}
+
+.nav-link{
+    display: block;
+    font-size: 1.3rem;
+    color: white;
+    text-decoration: uppercase;
+    line-height: 4rem;
+    letter-spacing: 3px; 
+    transition: color .6s;
+}
+
+/* .nav-link .dropdown-item .drop-link{
+    margin-left: 10px;
+    justify-content: end;
+} */
+
+.drop-link{
+    display: block;
+    font-size: 13px;
+    color: white;
+    text-decoration: uppercase;
+    line-height: 2rem;
+    letter-spacing: 2px; 
+    transition: color .6s;
+    margin-left: 2rem;
+    border-bottom: 1px solid;
+    width: fit-content;
+}
+
+.drop-link:last-child{
+    border-bottom: none;
+}
+
+.nav-link:hover{
+    color: darkgrey;
+}
+.drop-link:hover{
+    color: darkgrey;
+}
+
+.nav-link.current{
+   color: rgb(251, 255, 0);
+}
+
+.nav-link i{
+    font-size: 1.5rem;
+    margin-right: 1rem;
+}
+
+.social{
+    display: flex;
+    padding: 0.1rem;
+    
+
+}
+
+.icon-link{
+    padding-right: 2rem;
+    display: flex;
+    transition: color .6s;
+}
+
+.icon-link i{
+    font-size: 12px;
+    color: white;
+    margin: auto;
+    transition: color .6s;
+}
+
+.icon-link i:hover{
+    color: darkgray;
+}
+
+main{
+    perspective: 100rem;
+}
+
+.zoom-content{
+    transform-style: preserve-3d;
+    transition: transform .6s cubic-bezier(0.95, 0.05, 0.795,0.035);
+}
+
+.active .close{
+    display: block;
+}
+
+.active .open{
+    display: none;
+}
+
+header.active::before{
+    transform: translate(0,0);
+    opacity: 78%;
+    transition: opacity .6s;
+}
+
+.active .sidebar{
+    transform: translateX(0);
+}
+
+.active .zoom-content{
+    transform: translate3d(0,0,-10rem);
+    }
+
+@media screen and (max-with: 500px){
+    .nav-link{
+        line-height: 5rem;
+    }
+
+    .hamburger{
+        top: 1rem;
+        right: 1rem;
+    }
+}
+
+@media screen and (max-with: 500px){
+  .sidebar{
+      width: 25rem;
+  }
+}
+
+.nav-brand img{
+    cursor: pointer;
+}
+
+.nav-brand img:hover{
+    transform: translate(0,0);
+    opacity: 78%;
+    transition: opacity .6s;
+}

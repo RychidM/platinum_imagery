@@ -1,0 +1,18 @@
+{
+  "name": "platinum.imagery_2nd",
+  "version": "1.0.0",
+  "description": "PLatinum.imagery web app",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Richard Oppong",
+  "license": "ISC",
+  "dependencies": {
+    "debug": "^4.1.1",
+    "ejs": "^3.1.8",
+    "express": "^4.17.1",
+    "mongodb": "^3.5.7"
+  }
+}

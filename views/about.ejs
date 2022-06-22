@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="shortcut icon" type="image/png" href="images/favicon/plat_favicon.png">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/about_style.css">
+    <link rel="stylesheet" href="/helpers.css">
+    <!-- <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/brands.min.js"> -->
+    <link href='https://fonts.googleapis.com/css?family=Cabin' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Righteous' rel='stylesheet'>
+</head>
+<body>
+    <header>
+        <div class="hamburger">
+           <div class="open"><p>MENU</p> </div>
+           <div class="close"> <i class="fas fa-times"></i></div>
+        </div>
+        <!-- <div class="cart-menu">
+            <a class="cart-link" href="#">
+                <i class="fa fa-cart-plus" aria-hidden="true"></i>
+            </a>
+        </div> -->
+
+        
+
+        <div class="wrapper">
+            <div class="wrapper_content">
+                <div class="box-1">
+                    <h3>About Richard</h3>
+
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis doloremque nesciunt dolor velit maxime quasi eveniet. Ea, corporis magnam! 
+                        Aliquid nulla eius deserunt doloribus asperiores autem odit exercitationem in sequi. 
+                        Ipsam temporibus qui aliquam illo fugiat mollitia quod eaque beatae sapiente veritatis deserunt dolorum iusto quo soluta eum,
+                        laborum quia repellendus consequuntur voluptas rem, eos fugit accusamus dicta atque. Veritatis, reprehenderit assumenda!
+                       
+                    </p>
+                    
+                </div>
+
+                <div class="box-2">
+
+                    <p>
+                        <img src="/images/biopic.jpg" alt="bio pic" class="bioimg">
+                    </p>
+                    
+                </div>
+            </div>
+        </div>
+
+        <nav class="sidebar-p">
+            <ul class="nav-lists">
+            <div class="nav-brand">
+                <a href="/">
+                    <img src="/images/platinumlogowhite.png" alt="logo image">
+                </a>
+                
+            </div>
+                <li class="nav-items">
+                    <a href="/" class="nav-links">
+                      <i class="fas fa-home"></i>Home
+                    </a>
+                </li>
+                    <li class="nav-items">
+                        <a href="/portfolio" class="nav-links">
+                      <i class="fas fa-briefcase"></i>Portfolio
+                    </a>
+                    <ul class="dropdown">
+                        <li class="dropdown-item">
+                            <a href="#" class="drop-link">Fashion</a>
+                        </li>
+                        <li class="dropdown-item">
+                            <a href="#" class="drop-link">Portriat</a>
+                        </li>
+                        <li class="dropdown-item">
+                            <a href="#" class="drop-link">Swim Wear</a>
+                        </li>
+                        <li class="dropdown-item">
+                            <a href="#" class="drop-link">Beauty Editorial</a>
+                        </li>
+                        <li class="dropdown-item">
+                            <a href="#" class="drop-link">Boudior</a>
+                        </li>
+                    </ul>
+                </li>
+                  <li class="nav-items">
+                       <a href="#" class="nav-links">
+                      <i class="fas fa-print"></i>Order Prints
+                    </a>
+                </li>
+                  <li class="nav-items">
+                       <a href="/about" class="nav-links current-item">
+                      <i class="fas fa-address-card"></i>About
+                    </a>
+                </li>
+                    <li class="nav-items">
+                        <a href="#" class="nav-links">
+                      <i class="fas fa-envelope"></i>Contact
+                    </a>
+                </li>
+            </ul>
+            <div class="social-m">
+                <a href="https://www.instagram.com/platinum.imagery/" class="icon-links" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://web.facebook.com/platinum.imagery01/" class="icon-links" target="_blank">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="https://www.behance.net/platinumimagery" class="icon-links" target="_blank">
+                    <i class="fab fa-behance"></i>
+                </a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="zoom-contents">
+            <section>
+                
+            </section>
+        </div>
+        <!-- <div class="logo-img">
+            <img src="/images/platinumlogowhite.png" alt="logo image">
+        </div> -->
+          
+        
+
+    </main>
+    <script>
+
+        const selectElements = (element) => document.querySelector(element);
+        
+        const header = selectElements('header');
+        const mainContent =selectElements('main');
+
+        selectElements('.hamburger').addEventListener('click', ()=>{
+        header.classList.toggle('active');
+        mainContent.classList.toggle('active');
+ });
+
+       window.onclick = (event) =>{
+         if(event.target.matches('.active')){
+             if(header.classList.contains('active')){
+                 header.classList.remove('active');
+                 mainContent.classList.remove('active');
+             }
+         }
+       };
+
+     </script>
+
+</body>
+
+</html>
